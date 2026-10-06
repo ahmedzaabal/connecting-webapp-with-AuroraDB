@@ -35,7 +35,7 @@ this project took around 1 hour
 
 To connect to my EC2 instance, I used the key that that was created from the keypair genertor and used the following command:
 
-# ssh -i <keypair key> ec2-user@<public IP> 
+$ ssh -i <keypair key> ec2-user@<public IP> 
 
 
 To help me create my web app, I first installed the Apache web server: the most widely used web server in the world. A web server is a software that gets your content (e.g. web pages) to users via the internet.
@@ -104,23 +104,23 @@ Next, I upgraded my web app by creating the following script that changes the lo
 
 To make sure my web app was working correctly, I installed mysql engine from their repo using the following command: 
 
-# sudo yum install https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm -y
+$ sudo yum install https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm -y
 
 and installed the client using the following command: 
 
-# sudo yum install mysql-community-client -y
+$ sudo yum install mysql-community-client -y
 
 Then I accessed the database using the following command: 
 
-# mysql -h nextwork-db-cluster.cluster-c3mmkk2wohtg.us-east-1.rds.amazonaws.com -P 3306 -u admin -p
+$ mysql -h nextwork-db-cluster.cluster-c3mmkk2wohtg.us-east-1.rds.amazonaws.com -P 3306 -u admin -p
 
 then started to navigate through the database until I was able to check the sample database following the below steps:
 
-# SHOW DATABASES;
-# USE sample;
-# SHOW TABLES;
-# DESCRIBE EMPLOYEES;
-# SELECT * FROM EMPLOYEES;
+$ SHOW DATABASES;
+$ USE sample;
+$ SHOW TABLES;
+$ DESCRIBE EMPLOYEES;
+$ SELECT * FROM EMPLOYEES;
 
 ![Image](https://nextwork.ai/amused_beige_adorable_sphinx/uploads/921d7b78-ffa4-5e41-a5b5-aed76c78efad_1409z22b)
 
